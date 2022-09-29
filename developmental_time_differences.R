@@ -1,6 +1,6 @@
 ######### now testing for developmental time differences
 rm(list = ls())
-mydata <- read.csv("~/Documents/PhD/R_2014:15/R_postPhD/eggSize/03b_developmentalTimings_means.csv")
+mydata <- read.csv("~/Documents/PhD/R_2014:15/R_postPhD/eggSize/developmental_timings.csv")
 mydata <- mydata[!apply(is.na(mydata) | mydata == "", 1, all), ] # remove empty columns at bottom
 mydata$year <- as.factor(mydata$year)
 mydata$morph <- factor(mydata$morph, levels = c("FJ","VS","VB","TP","TLB"))

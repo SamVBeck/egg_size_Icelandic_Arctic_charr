@@ -9,7 +9,7 @@ library(RColorBrewer)
 library(AICcmodavg)
 
 # load data
-mydata <- read.csv("~/Documents/PhD/R_2014:15/R_postPhD/eggSize/01j_mydata20141516.csv")
+mydata <- read.csv("~/Documents/PhD/R_2014:15/R_postPhD/eggSize/size_data.csv")
 mydata <- mydata[!apply(is.na(mydata) | mydata == "", 1, all), ] # remove empty columns at bottom
 mydata$date_processed <- as.Date(mydata$date_processed, format = "%m/%d/%y")
 mydata$ID <- as.factor(mydata$ID)
@@ -104,8 +104,8 @@ p1 <- plotPop + geom_boxplot(aes(fill = pop.morph, group = pop.morph), alpha = 0
 #####    Dev timings = mydata
 ##################################################################################
 rm(list = ls())
-meanData <- read.csv("~/Documents/PhD/R_2014:15/R_postPhD/eggSize/02b_mydata_femaleMeans.csv")
-myEggSize <- read.csv("~/Documents/PhD/R_2014:15/R_postPhD/eggSize/04_mydata_EggSize.csv")
+meanData <- read.csv("~/Documents/PhD/R_2014:15/R_postPhD/eggSize/female_data.csv")
+myEggSize <- read.csv("~/Documents/PhD/R_2014:15/R_postPhD/eggSize/egg_size.csv")
 myEggSize$year <- as.factor(myEggSize$year)
 myEggSize$male <- as.factor(myEggSize$male)
 myEggSize$pop.morph <- factor(myEggSize$pop.morph, levels = c("FJ","VS","VB","SV","TP","TLB","GB"))

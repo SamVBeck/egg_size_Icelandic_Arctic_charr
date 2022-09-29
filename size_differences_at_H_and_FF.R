@@ -8,7 +8,7 @@ library(plyr)
 library(car)
 library(emmeans)
 
-mydata <- read.csv("~/Documents/PhD/R_2014:15/R_postPhD/eggSize/02b_mydata_femaleMeans.csv")
+mydata <- read.csv("~/Documents/PhD/R_2014:15/R_postPhD/eggSize/female_data.csv")
 mydata$year <- as.factor(mydata$year)
 mydata$male <- as.factor(mydata$male)
 mydata$pop.morph <- factor(mydata$pop.morph, levels = c("FJ","VS","VB","SV","TP","TLB","GB"))
